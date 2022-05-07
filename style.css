@@ -91,11 +91,11 @@ body {
   transform: translateX(-50%);
   color: #eee;
   text-align: center;
-  /* background-color: rgb(64, 64, 64);
+  background-color: rgb(64, 64, 64);
   width: 30rem;
   padding: 0.2rem 0.2rem;
   border-radius: 0.8rem;
-  opacity: 0.6; */
+  opacity: 0.6;
 }
 
 .logo {
@@ -118,12 +118,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 5rem 0;
+  padding: 10rem;
+  font-size: 3rem;
 }
 
 .album-wrapper {
   display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   height: 70%;
@@ -133,7 +133,7 @@ body {
   width: 35rem;
   background-color: #fffeee;
   padding: 1rem 1rem 2rem 1rem;
-  box-shadow: 1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee;
+  /* box-shadow: 1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee; */
   position: relative;
 }
 
@@ -146,6 +146,8 @@ body {
   font-size: 2.2rem;
   font-weight: 700;
   color: #796458;
+  margin-top: 2rem;
+  padding-bottom: 3rem;
 }
 
 .album-name span {
@@ -176,8 +178,8 @@ body {
 .story-btn {
   width: 4rem;
   height: 4rem;
-  position: absolute;
   background-color: #222;
+  position: absolute;
   top: -1rem;
   right: -1rem;
   border-radius: 5rem;
@@ -186,6 +188,7 @@ body {
   padding: 0.5rem;
   cursor: pointer;
   z-index: 50;
+  transition: transform 0.5s;
 }
 
 .story-btn-line {
@@ -203,19 +206,31 @@ body {
   left: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 2rem;
   transform: scale(0);
+  transform-origin: top right;
+  border-radius: 50rem 0 50rem 50rem;
+  transition: all 0.5s;
+}
+
+.change.story {
+  transform: scale(1);
+  border-radius: 0;
+}
+.change.story-btn {
+  transform: rotate(405deg);
 }
 
 .story-heading {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 2rem;
 }
 
-.story-paragraph {
+.album-tracks-story {
   font-size: 1.8rem;
   color: #fff;
   text-align: justify;
