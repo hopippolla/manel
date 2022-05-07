@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Radio+Canada:wght@300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  font-family: "Radio Canada", sans-serif;
+  font-weight: 500;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  position: relative;
+}
+
+.floating-bg {
+  width: 150vw;
+  height: 150vw;
+  background-color: rgba(0, 42, 56, 0.8);
+  position: absolute;
+  top: -125vw;
+  left: calc(50% - 75vw);
+  border-radius: 45%;
+  animation: rotate 20s infinite;
+}
+
+.floating-bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(224, 44, 40, 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 30%;
+  animation: rotate 50s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
