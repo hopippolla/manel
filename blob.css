@@ -1,0 +1,87 @@
+.blob-wobble {
+  width: 400px;
+  height: 400px;
+  background: var(--random_bg);
+  background-position: center center;
+  background-size: cover;
+  border-radius: 41% 59% 31% 69% / 51% 72% 28% 49%;
+  animation: wobble 10s ease-in-out alternate infinite;
+  box-shadow: 2px 14px 28px -10px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.blob-wobble-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--random_bg);
+  background-position: center center;
+  background-size: cover;
+  border-radius: 70% 69% 51% 72% / 41% 62% 38% 59%;
+  animation: wobble-1 10s ease-in-out alternate infinite;
+  box-shadow: 2px 14px 28px -10px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.blob-wobble-3 {
+  width: 400px;
+  height: 400px;
+  background: var(--random_bg);
+  background-position: center center;
+  background-size: cover;
+  border-radius: 50% 69% 41% 82% / 41% 52% 48% 69%;
+  animation: wobble-3 10s ease-in-out alternate infinite;
+  box-shadow: 2px 14px 28px -10px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+/* CSS to animate the blob */
+
+@keyframes wobble {
+  25% {
+    border-radius: 41% 59% 74% 26% / 51% 31% 69% 49%;
+    /* transform: scale(0.9) rotate(-5deg); */
+  }
+
+  55% {
+    border-radius: 33% 87% 43% 67% / 44% 41% 79% 86%;
+    /* transform: scale(0.8) rotate(6deg); */
+  }
+
+  100% {
+    border-radius: 75% 25% 75% 35% / 74% 55% 45% 26%;
+    /* transform: scale(0.95) rotate(-9deg); */
+  }
+}
+
+@keyframes wobble-1 {
+  25% {
+    border-radius: 51% 49% 78% 36% / 61% 31% 59% 99%;
+    /* transform: scale(0.9) rotate(-5deg); */
+  }
+
+  60% {
+    border-radius: 23% 77% 63% 47% / 34% 61% 89% 86%;
+    /* transform: scale(0.8) rotate(6deg); */
+  }
+
+  100% {
+    border-radius: 75% 35% 75% 45% / 45% 26% 64% 55%;
+    /* transform: scale(0.95) rotate(-9deg); */
+  }
+}
+
+@keyframes wobble-3 {
+  25% {
+    border-radius: 48% 36% 51% 49% / 89% 86% 59% 79%;
+    /* transform: scale(0.9) rotate(-5deg); */
+  }
+
+  70% {
+    border-radius: 33% 77% 63% 47% / 34% 61% 67% 31%;
+    /* transform: scale(0.8) rotate(6deg); */
+  }
+
+  100% {
+    border-radius: 65% 35% 45% 75% / 83% 46% 34% 25%;
+    /* transform: scale(0.95) rotate(-9deg); */
+  }
+}
