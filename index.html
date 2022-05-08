@@ -11,18 +11,19 @@
   </head>
   <body>
     <div class="container">
-      <section class="section-1">
+      <section class="section-1" id="home">
         <nav class="navbar">
-          <a href="" class="navbar-link">Home</a>
-          <a href="" class="navbar-link">Band</a>
-          <a href="" class="navbar-link">Albums</a>
-          <a href="" class="navbar-link">Gallery</a>
+          <a href="#home" class="navbar-link">Home</a>
+          <a href="#band" class="navbar-link">Band</a>
+          <a href="#albums" class="navbar-link">Albums</a>
+          <a href="#gallery" class="navbar-link">Gallery</a>
+          <a href="#contact" class="navbar-link">Contact</a>
         </nav>
 
         <div class="floating-bg"></div>
         <h1 class="section-1-heading">manel</h1>
         <div class="logo">
-          <i class="fa-egg"></i>
+          <!-- <i class="fa-egg"></i> -->
         </div>
       </section>
 
@@ -207,7 +208,9 @@
           </div>
       </section>
 
+      
       <section class="gallery" id="gallery">
+       
         <figure class="gallery__item gallery__item--1"><img src="images/gal-21.gif" alt="Gallery image 1" class="gallery__img"></figure>
         <figure class="gallery__item gallery__item--2"><img src="images/gal-9.gif" alt="Gallery image 2" class="gallery__img"></figure>
         <figure class="gallery__item gallery__item--3"><img src="images/gal-12.gif" alt="Gallery image 3" class="gallery__img"></figure>
@@ -222,7 +225,22 @@
         <figure class="gallery__item gallery__item--12"><img src="images/gal-1.jpeg" alt="Gallery image 12" class="gallery__img"></figure>
         <figure class="gallery__item gallery__item--13"><img src="images/gal-19.gif" alt="Gallery image 13" class="gallery__img"></figure>
         <figure class="gallery__item gallery__item--14"><img src="images/gal-24.gif" alt="Gallery image 14" class="gallery__img"></figure>
+        
 
+    </section>
+
+    <section class="section-4" id="contact">
+      <h1 class="section-heading">Contact</h1>
+      <div class="form-container">
+        <img src="images/form-img.png" class="form-img" alt="from-img">
+        <form class="contact-form">
+          <input type="text" placeholder="Name">
+          <input type="text" placeholder="Email">
+          <textarea placeholder="Message"></textarea>
+          <input type="submit" value="Send">
+        </form>
+      </div>
+      <p class="footer"> Created by Felipe Brandalise as an exercise on HTML, CSS, Grid and Javascript. You can find the code on my GitHub repository. May, 2022.</p>
 
     </section>
 

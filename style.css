@@ -13,9 +13,11 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
-body {
+container {
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -70,7 +72,7 @@ body {
 .navbar-link {
   font-size: 1.2rem;
   font-weight: 400;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   color: #fff;
   text-transform: uppercase;
   transition: all 0.5s;
@@ -353,14 +355,16 @@ body {
 }
 
 .gallery {
+  height: 80vh;
   margin-top: 700px;
   background-color: #14142c;
   grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
-  gap: 1.5rem;
+  grid-template-rows: repeat(7, 5vw);
+  /* gap: 1rem; */
   padding: 1.5rem;
+  justify-content: center;
 }
 .gallery__item {
   margin: 0;
@@ -433,4 +437,96 @@ body {
 
 .gallery__img:hover {
   transform: scale(1.5);
+}
+
+.section-4 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-container {
+  width: 80%;
+  height: 40%;
+  background-color: #fffeee;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0.3rem 0.3rem 0.3rem #ccc, -0.1rem -0.1rem;
+  border: none;
+  perspective: 100rem;
+}
+
+.form-img {
+  width: 30rem;
+  background-color: rgba(50, 231, 255, 0.8);
+  padding: 5rem;
+  opacity: 0.8;
+  box-shadow: -3rem 3rem 4rem #aaa;
+  border-radius: 0.5rem;
+  transform: rotateY(20deg);
+  transition: all 0.5s;
+}
+
+.form-img:hover {
+  transform: translateY(-2rem) rotateY(20deg);
+  box-shadow: -5rem 5rem 7rem #aaa;
+}
+
+.contact-form {
+  width: 45rem;
+  background-color: #fffeee;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 3rem 3rem 4rem #aaa;
+  transform: rotateY(-20deg);
+  transition: all 0.5s;
+}
+
+.contact-form:hover {
+  transform: translateY(-2rem) rotateY(-20deg);
+  box-shadow: 5rem 5rem 7rem #aaa;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: inset 0.1rem 0.1rem 2rem #ddd, inset -0.1rem -0.1rem 2rem #ddd;
+}
+
+.contact-form textarea {
+  max-height: 15rem;
+  min-height: 10rem;
+  max-width: 100%;
+  min-width: 70%;
+}
+
+.contact-form input[type="submit"] {
+  background-color: rgba(50, 231, 255, 0.8);
+  color: #fff;
+  font-weight: bolder;
+  letter-spacing: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #32e7ff;
+}
+
+.footer {
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  color: #444;
+  margin-top: 1rem;
 }
