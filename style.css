@@ -436,7 +436,7 @@ body {
 }
 
 .gallery {
-  height: 90vh;
+  height: 85vh;
   margin-top: 700px;
   background-color: #14142c;
   grid-column: full-start / full-end;
@@ -544,7 +544,7 @@ body {
 
 .form-img {
   width: 30rem;
-  background-color: rgba(50, 231, 255, 0.8);
+  /* background-color: rgba(50, 231, 255, 0.8); */
   padding: 5rem;
   opacity: 0.8;
   box-shadow: -3rem 3rem 4rem #aaa;
@@ -607,10 +607,13 @@ body {
 }
 
 .footer {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   letter-spacing: 0.1rem;
   color: #444;
-  margin-top: 1rem;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  background-color: #fcd230;
 }
 
 .scroll-up-btn {
