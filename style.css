@@ -477,13 +477,13 @@ svg:hover {
 }
 
 .gallery {
-  height: 85vh;
+  height: 92vh;
   margin-top: 700px;
   background-color: #14142c;
   grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
+  grid-template-rows: repeat(8, 5.5vw);
   gap: 1rem;
   padding: 1.5rem;
   justify-content: center;
