@@ -477,7 +477,7 @@ svg:hover {
 }
 
 .gallery {
-  height: 92vh;
+  height: 103vh;
   margin-top: 700px;
   background-color: #14142c;
   grid-column: full-start / full-end;
@@ -676,7 +676,7 @@ h1 {
   max-width: 95%;
   font-size: 5rem;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Radio Canada", sans-serif;
   color: #540032;
 }
 
