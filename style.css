@@ -28,7 +28,6 @@ body {
   bottom: 0;
   right: 0;
   display: inline-flex;
-
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -128,7 +127,7 @@ svg:hover {
 .section-1-heading {
   font-size: 8rem;
   font-weight: 700;
-  text-transform: downcase;
+  text-transform: lowercase;
   position: absolute;
   top: 12vw;
   left: 50%;
@@ -169,11 +168,54 @@ svg:hover {
   font-size: 5rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #999;
+  color: rgb(232, 227, 227);
   text-align: center;
-  opacity: 0.1;
+  opacity: 0.8;
   text-shadow: 2rem 2rem 4rem #aaa;
   padding-top: 2rem;
+  z-index: 300;
+  /* text-transform: lowercase; */
+}
+
+.band-wrapper {
+  /* display: flex; */
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 80vh;
+  top: 400rem;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 10% 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.4);
+  line-height: 0;
+}
+
+.box > img {
+  width: 100%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+  margin-top: -10rem;
+  color: #fff;
+}
+
+.box:hover { flex: 1 1 20%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
 }
 
 .member {
@@ -228,7 +270,7 @@ svg:hover {
   height: 15rem;
   object-fit: cover;
   margin: 2rem 0;
-  /* border-radius: 50%; */
+  border-radius: 50%;
 }
 
 .member-name {
@@ -242,7 +284,7 @@ svg:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 15rem;
+  padding: 1rem;
   font-size: 3rem;
 }
 
@@ -250,26 +292,35 @@ svg:hover {
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
+  position: relative;
 }
 
 .line-display {
   display: inline-block;
+  z-index: 600;
+  /* text-transform: lowercase; */
 }
 
 .circle-1 {
-  display: inline-block;
+  /* display: inline-block; */
+  position: absolute;
+  right: 51%;
+  bottom: 20%;
+  top: 15%;
   background: plum;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   overflow: hidden;
-  animation: morph 3s linear infinite;
+  animation: morph 10s linear infinite;
+  z-index: -100;
+  opacity: .5;
 }
 
 @keyframes morph {
   0%,
   100% {
-    border-radius: 90% 60% 70% 40% / 40% 60% 50%;
+    border-radius: 90% 60% 70% 40% / 40% 60% 50% 60%;
   }
   34% {
     border-radius: 70% 80% 50% 50% / 50% 70% 70% 70%;
@@ -281,13 +332,18 @@ svg:hover {
 }
 
 .circle-2 {
-  display: inline-block;
+  /* display: inline-block; */
+  position: absolute;
+  right: 46%;
+  top: 10%;
   background: plum;
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   border-radius: 60% 40% 60% 70% / 50% 80% 70% 60%;
   /* overflow: hidden; */
-  animation: morph-2 4s linear infinite;
+  animation: morph-2 10s linear infinite;
+  opacity: .1;
+  /* z-index: 120; */
 }
 
 @keyframes morph-2 {
@@ -304,13 +360,100 @@ svg:hover {
 }
 
 .circle-3 {
-  display: inline-block;
+  /* display: inline-block; */
+  position: absolute;
+  right: 49%;
+  top: 16%;
   background: plum;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
+  border-radius: 60% 40% 60% 70% / 50% 80% 70% 60%;
+  /* overflow: hidden; */
+  animation: morph-3 10s linear infinite;
+  opacity: .5;
+}
+
+@keyframes morph-3 {
+  0%,
+  100% {
+    border-radius: 60% 80% 40% 50% / 60% 40% 50%;
+  }
+  34% {
+    border-radius: 70% 80% 50% 50% / 50% 70% 70% 70%;
+  }
+  60% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
+}
+
+.circle-4 {
+  /* display: inline-block; */
+  position: absolute;
+  right: 54%;
+  top: 20%;
+  background: plum;
+  width: 75px;
+  height: 75px;
+  border-radius: 60% 40% 60% 70% / 50% 80% 70% 60%;
+  /* overflow: hidden; */
+  animation: morph-3 15s linear infinite;
+  z-index: -150;
+  opacity: .2;
+}
+
+@keyframes morph-3 {
+  0%,
+  100% {
+    border-radius: 60% 80% 40% 50% / 60% 40% 50%;
+  }
+  34% {
+    border-radius: 70% 80% 50% 50% / 50% 70% 70% 70%;
+  }
+  60% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
+}
+
+.circle-5 {
+  /* display: inline-block; */
+  position: absolute;
+  right: 41.5%;
+  top: 20%;
+  bottom: 8%;
+  background: plum;
+  width: 70px;
+  height: 70px;
+  border-radius: 60% 40% 60% 70% / 50% 80% 70% 60%;
+  /* overflow: hidden; */
+  animation: morph-3 10s linear infinite;
+  z-index: -120;
+}
+
+@keyframes morph-3 {
+  0%,
+  100% {
+    border-radius: 60% 80% 40% 50% / 60% 40% 50%;
+  }
+  34% {
+    border-radius: 70% 80% 50% 50% / 50% 70% 70% 70%;
+  }
+  60% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
+}
+
+.circle-6 {
+  /* display: inline-block; */
+  position: absolute;
+  right: 44%;
+  top: 20%;
+  background: plum;
+  width: 73px;
+  height: 73px;
   border-radius: 60% 40% 60% 70% / 50% 80% 70% 60%;
   /* overflow: hidden; */
   animation: morph-3 5s linear infinite;
+  z-index: -80;
 }
 
 @keyframes morph-3 {
@@ -329,11 +472,12 @@ svg:hover {
 .album-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 4rem;
+  row-gap: 3rem;
   column-gap: 2rem;
   justify-content: space-evenly;
   align-items: center;
   height: 70%;
+  margin-left: 10rem;
 }
 
 .album-detail {
@@ -453,7 +597,7 @@ svg:hover {
 
 .milles {
   background-color: #5c1213;
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 .atletes {
@@ -477,8 +621,8 @@ svg:hover {
 }
 
 .gallery {
-  height: 103vh;
-  margin-top: 700px;
+  height: 93vh;
+  margin-top: 600px;
   background-color: #14142c;
   grid-column: full-start / full-end;
   display: grid;
@@ -678,6 +822,7 @@ h1 {
   text-align: center;
   font-family: "Radio Canada", sans-serif;
   color: #540032;
+  z-index: 1000;
 }
 
 p.bg {
